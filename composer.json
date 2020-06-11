@@ -1,0 +1,39 @@
+{
+    "name": "moonwalkingbits/wordpress-autoloader-composer-plugin",
+    "description": "A composer plugin enabling libraries/projects to autoload classes using the WordPress coding standards.",
+    "type": "composer-plugin",
+    "license": "GPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "Martin Pettersson",
+            "email": "martin@moonwalkingbits.com"
+        }
+    ],
+    "scripts": {
+        "lint": "phpcs --standard=PSR12 src",
+        "analyze": [
+            "phpmd src text phpmd.xml",
+            "phan --output-mode text --allow-polyfill-parser"
+        ]
+    },
+    "autoload": {
+        "psr-4": {
+            "MoonwalkingBits\\Composer\\Plugin\\WordPress\\": "src/"
+        }
+    },
+    "require": {
+        "php": ">=7.4",
+        "composer-plugin-api": "~1.1",
+        "moonwalkingbits/wordpress-autoloader": "~0.1"
+    },
+    "extra": {
+        "class": "MoonwalkingBits\\Composer\\Plugin\\WordPress\\Autoloader"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "~3.5",
+        "phan/phan": "~3.0",
+        "phpmd/phpmd": "~2.8",
+        "composer/composer": "~1.10",
+        "composer/semver": "~1.4"
+    }
+}

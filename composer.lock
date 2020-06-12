@@ -4,8 +4,53 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "644c3ff4f9a8fd45ee4161c7aad8d1ab",
-    "packages": [],
+    "content-hash": "52bf9f0c81348907817a39fac9d8a09e",
+    "packages": [
+        {
+            "name": "moonwalkingbits/wordpress-autoloader",
+            "version": "0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/moonwalkingbits/wordpress-autoloader.git",
+                "reference": "022bb7450b4d07554ea1197af73012bc6dacb97f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/moonwalkingbits/wordpress-autoloader/zipball/022bb7450b4d07554ea1197af73012bc6dacb97f",
+                "reference": "022bb7450b4d07554ea1197af73012bc6dacb97f",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.4"
+            },
+            "require-dev": {
+                "dealerdirect/phpcodesniffer-composer-installer": "~0.6",
+                "phan/phan": "~3.0",
+                "phpmd/phpmd": "~2.8",
+                "phpunit/phpunit": "~9.2",
+                "squizlabs/php_codesniffer": "~3.5",
+                "wp-coding-standards/wpcs": "~2.3"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/class-autoloader.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Martin Pettersson",
+                    "email": "martin@moonwalkingbits.com"
+                }
+            ],
+            "description": "A class loader for the WordPress coding standards.",
+            "time": "2020-06-11T23:58:53+00:00"
+        }
+    ],
     "packages-dev": [
         {
             "name": "composer/ca-bundle",
@@ -2358,6 +2403,7 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
+        "php": ">=7.4",
         "composer-plugin-api": "~1.1"
     },
     "platform-dev": [],

@@ -10,7 +10,7 @@
         }
     ],
     "scripts": {
-        "lint": "phpcs --standard=PSR12 src",
+        "lint": "phpcs -p --standard=PSR12 src",
         "analyze": [
             "phpmd src text phpmd.xml",
             "phan --output-mode text --allow-polyfill-parser"

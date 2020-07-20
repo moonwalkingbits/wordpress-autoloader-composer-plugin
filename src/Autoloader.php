@@ -46,6 +46,8 @@ class Autoloader implements PluginInterface, EventSubscriberInterface
         $autoloadFileContent = <<<EOF
             <?php
 
+            require_once 'autoload.php';
+
             \$autoloader = new Moonwalking_Bits\\Autoloader();
 
             spl_autoload_register( array( \$autoloader, 'load_class' ) );

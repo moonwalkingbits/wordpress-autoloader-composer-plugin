@@ -1,6 +1,6 @@
 # WordPress Autoloader Composer Plugin
 
-To easily consume libraries following the [WordPress coding standards](https://make.wordpress.org/core/handbook/best-practices/coding-standards/php/)
+To easily consume libraries following the [WordPress coding standards](https://developer.wordpress.org/coding-standards/wordpress-coding-standards/php/)
 this plugin enables the libraries to register namespace mappings in the
 composer configuration like any other autoloading standard.
 

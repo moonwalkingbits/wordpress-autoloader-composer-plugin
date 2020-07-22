@@ -1,6 +1,6 @@
 # WordPress Autoloader Composer Plugin
 
-To easily consume libraries following the [WordPress coding standards](wordpress-coding-standards)
+To easily consume libraries following the [WordPress coding standards](https://make.wordpress.org/core/handbook/best-practices/coding-standards/php/)
 this plugin enables the libraries to register namespace mappings in the
 composer configuration like any other autoloading standard.
 
@@ -59,7 +59,4 @@ $autoloader->add_namespace_mapping( 'Additional\\Namespace\\', __DIR__ . '/path'
 
 ## License
 
-WordPress Autoloader Composer Plugin is released under the [GPL](license) license.
-
-[license](https://www.gnu.org/licenses/)
-[wordpress-coding-standards](https://make.wordpress.org/core/handbook/best-practices/coding-standards/php/)
+WordPress Autoloader Composer Plugin is released under the [GPL](https://www.gnu.org/licenses/) license.

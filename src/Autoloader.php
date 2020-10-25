@@ -36,6 +36,20 @@ class Autoloader implements PluginInterface, EventSubscriberInterface
         $this->io = $io;
     }
 
+    /**
+     * @SuppressWarnings(PHPMD.UnusedFormalParameter)
+     */
+    public function deactivate(Composer $composer, IOInterface $io): void
+    {
+    }
+
+    /**
+     * @SuppressWarnings(PHPMD.UnusedFormalParameter)
+     */
+    public function uninstall(Composer $composer, IOInterface $io): void
+    {
+    }
+
     public function generateAutoloadFile(Event $event): void
     {
         $filesystem = new Filesystem();

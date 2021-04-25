@@ -77,7 +77,7 @@ class Autoloader implements PluginInterface, EventSubscriberInterface
                 array_map(function (string $directory) use ($namespace) {
                     return '$autoloader->add_namespace_mapping(' .
                         var_export($namespace, true) . ', ' .
-                        'dirname(__DIR__) . ' . var_export('../' . ltrim($directory, '/'), true) .
+                        "dirname(__DIR__) . '/' . " . var_export(ltrim($directory, '/'), true) .
                         ");\n";
                 }, $directories)
             );

@@ -16,20 +16,14 @@ class AutoloadGenerator extends ComposerAutoloadGenerator
 {
     public function parseAutoloads(
         array $packageMap,
-        PackageInterface $mainPackage,
+        PackageInterface $rootPackage,
         $filterOutRequireDevPackages = false
     ): array {
-        $mainPackageMap = array_shift($packageMap);
-
         if ($filterOutRequireDevPackages) {
-            $packageMap = $this->filterPackageMap($packageMap, $mainPackage);
+            $packageMap = $this->filterPackageMap($packageMap, $rootPackage);
         }
 
-        $sortedPackageMap = $this->sortPackageMap($packageMap);
-        $sortedPackageMap[] = $mainPackageMap;
-        array_unshift($packageMap, $mainPackageMap);
-
-        $wordpress = $this->parseAutoloadsType($packageMap, 'wordpress', $mainPackage);
+        $wordpress = $this->parseAutoloadsType($packageMap, 'wordpress', $rootPackage);
 
         return compact('wordpress');
     }

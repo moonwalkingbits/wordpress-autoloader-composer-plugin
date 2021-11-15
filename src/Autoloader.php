@@ -68,7 +68,6 @@ class Autoloader implements PluginInterface, EventSubscriberInterface
 
 
             EOF;
-
         $autoloadingRules = $this->getAutoloadingRules($event->isDevMode());
 
         foreach ($autoloadingRules as $namespace => $directories) {
@@ -95,7 +94,6 @@ class Autoloader implements PluginInterface, EventSubscriberInterface
     private function getAutoloadingRules(bool $isDevMode): array
     {
         $autoloadGenerator = new AutoloadGenerator($this->composer->getEventDispatcher(), $this->io);
-
         $autoloadingRules = $autoloadGenerator->parseAutoloads(
             $autoloadGenerator->buildPackageMap(
                 $this->composer->getInstallationManager(),
